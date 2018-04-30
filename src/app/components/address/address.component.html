@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addAddress()">Добавить адрес</button>
+        <button mat-button>Удалить адрес</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="addressId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID адреса </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.addressId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="country">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Страна </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.country}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Штат </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.state}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="region">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Область </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.region}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="city">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Город </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.city}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="district">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Район </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.district}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="village">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Улица </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.village}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="houseNumber">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Номер дома </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.houseNumber}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="apartmentNumber">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Номер квартиры </mat-header-cell>
+          <mat-cell *matCellDef="let address"> {{address.apartmentNumber}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let address; columns: displayedColumns;" (click)="updateAddress(address)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

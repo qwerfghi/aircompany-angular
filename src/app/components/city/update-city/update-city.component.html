@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Обновление даных о городе</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.city.name" placeholder="Название города">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.city.countryCode" placeholder="Код страны">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.city.district" placeholder="Провинция">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.city.population" placeholder="Население">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отмена</button>
+  <button mat-button [mat-dialog-close]="data.city" cdkFocusInitial>Обновить</button>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addCity()">Добавить город</button>
+        <button mat-button>Удалить город</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource" >
+
+        <ng-container matColumnDef="cityId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID города </mat-header-cell>
+          <mat-cell *matCellDef="let city"> {{city.cityId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Название города </mat-header-cell>
+          <mat-cell *matCellDef="let city"> {{city.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="countryCode">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Код страны </mat-header-cell>
+          <mat-cell *matCellDef="let city"> {{city.countryCode}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="district">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Область </mat-header-cell>
+          <mat-cell *matCellDef="let city"> {{city.district}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="population">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Население </mat-header-cell>
+          <mat-cell *matCellDef="let city"> {{city.population}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let city; columns: displayedColumns;" (click)="updateCity(city)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

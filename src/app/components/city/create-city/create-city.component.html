@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Введите необходимые данные</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="city.name" placeholder="Название города" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="city.countryCode" placeholder="Код страны" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="city.district" placeholder="Провинция" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="city.population" placeholder="Население" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Закрыть</button>
+  <button mat-button [mat-dialog-close]="city" cdkFocusInitial>Ok</button>
+</div>

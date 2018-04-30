@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addEmployee()">Добавить сотрудника</button>
+        <button mat-button>Удалить сотрудника</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource" >
+
+        <ng-container matColumnDef="employeeId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID сотрудника </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.employeeId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Должность </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.position}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="department">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Отдел </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.department}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="salary">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Заработная плата </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.salary}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="workRecordBookNumber">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Номер трудовой книги </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.workRecordBookNumber}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="personId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID персональных данных </mat-header-cell>
+          <mat-cell *matCellDef="let employee"> {{employee.personId}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let employee; columns: displayedColumns;" (click)="updateEmployee(employee)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

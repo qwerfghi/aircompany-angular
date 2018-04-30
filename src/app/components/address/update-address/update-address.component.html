@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Обновление даных о адресе</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.country" placeholder="Страна">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.state" placeholder="Штат">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.region" placeholder="Область">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.city" placeholder="Город">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.district" placeholder="Район">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.village" placeholder="Населенный пункт">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.houseNumber" placeholder="Номер дома">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.address.apartmentNumber" placeholder="Номер квартиры">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отмена</button>
+  <button mat-button [mat-dialog-close]="data.address" cdkFocusInitial>Обновить</button>
+</div>

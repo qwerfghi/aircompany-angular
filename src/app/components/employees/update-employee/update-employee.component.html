@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Обновление даных о сотруднике</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.employee.position" placeholder="Должность">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.employee.department" placeholder="Отдел">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.employee.salary" placeholder="Заработная плата">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.employee.workRecordBookNumber" placeholder="Номер трудовой книги">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.employee.personId" placeholder="ID персональных данных">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отмена</button>
+  <button mat-button [mat-dialog-close]="data.employee" cdkFocusInitial>Обновить</button>
+</div>
