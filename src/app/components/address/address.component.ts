@@ -48,8 +48,8 @@ export class AddressComponent implements OnInit {
 
   addAddress(): void {
     let dialogRef = this.dialog.open(CreateAddressComponent, {
-      width: '400px',
-      height: '600px'
+      width: '280px',
+      height: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -62,8 +62,8 @@ export class AddressComponent implements OnInit {
 
   updateAddress(address: Address) {
     let dialogRef = this.dialog.open(UpdateAddressComponent, {
-      width: '400px',
-      height: '600px',
+      width: '280px',
+      height: '500px',
       data: {
         address: address
       }

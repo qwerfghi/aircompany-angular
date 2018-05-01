@@ -48,8 +48,8 @@ export class CityComponent implements OnInit {
 
   addCity(): void {
     let dialogRef = this.dialog.open(CreateCityComponent, {
-      width: '250px',
-      height: '500px'
+      width: '280px',
+      height: '450px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -62,8 +62,8 @@ export class CityComponent implements OnInit {
 
   updateCity(city: City) {
     let dialogRef = this.dialog.open(UpdateCityComponent, {
-      width: '250px',
-      height: '500px',
+      width: '280px',
+      height: '450px',
       data: {
         city: city
       }

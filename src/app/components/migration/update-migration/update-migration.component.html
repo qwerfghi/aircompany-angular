@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Обновление данных о перелете</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.migration.departureId" placeholder="ID места отправки">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.migration.departureDate" placeholder="Дата отправления">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.migration.arrivalId" placeholder="ID места прибытия">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.migration.arrivalDate" placeholder="Дата прибытия">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.migration.planeId" placeholder="ID самолета">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отмена</button>
+  <button mat-button [mat-dialog-close]="data.migration" cdkFocusInitial>Обновить</button>
+</div>

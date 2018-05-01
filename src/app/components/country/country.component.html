@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-12 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addCountry()">Добавить страну</button>
+        <button mat-button>Удалить страну</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="code">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Код страны</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.code}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Название</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.name}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="continent">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Континент</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.continent}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="region">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Регион</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.region}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="surfaceArea">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Площадь</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.surfaceArea}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="population">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Население</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.population}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="localName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Местное название</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.localName}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="governmentForm">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Форма правления</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.governmentForm}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="code2">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Двухбуквенный код страны</mat-header-cell>
+          <mat-cell *matCellDef="let country"> {{country.code2}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let country; columns: displayedColumns;" (click)="updateCountry(country)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+

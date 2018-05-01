@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-12 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addPassenger()">Добавить пассажира</button>
+        <button mat-button>Удалить пассажира</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="passengerId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID пассажира</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.passengerId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Имя</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.name}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Фамилия</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.lastName}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="sex">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Пол</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.sex}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="birthdate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Дата рождения</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.birthdate}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="passport">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Паспорт</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.passport}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Телефон</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.phone}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="country">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Страна</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.country}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="addressId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID адреса</mat-header-cell>
+          <mat-cell *matCellDef="let passenger"> {{passenger.addressId}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let passenger; columns: displayedColumns;" (click)="updatePassenger(passenger)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+

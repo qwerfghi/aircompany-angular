@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addMigration()">Добавить перелет</button>
+        <button mat-button>Удалить перелет</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="migrationId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID перелета</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.migrationId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="departureId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID места отправки</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.departureId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="departureDate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Дата отправления</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.departureDate}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="arrivalId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID места прибытия</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.arrivalId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="arrivalDate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Дата прибытия</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.arrivalDate}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="planeId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID самолета</mat-header-cell>
+          <mat-cell *matCellDef="let migration"> {{migration.planeId}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let migration; columns: displayedColumns;" (click)="updateMigration(migration)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+

@@ -2,7 +2,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {Employee} from '../../model/Employee';
 import {EmployeeService} from '../../service/employee.service';
 import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {UpdateCityComponent} from "../city/update-city/update-city.component";
 import {CreateEmployeeComponent} from "./create-employee/create-employee.component";
 import {UpdateEmployeeComponent} from "./update-employee/update-employee.component";
 

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addUser()">Добавить пользователя</button>
+        <button mat-button>Удалить пользователя</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="userId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID пользователя</mat-header-cell>
+          <mat-cell *matCellDef="let user"> {{user.userId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Логин</mat-header-cell>
+          <mat-cell *matCellDef="let user"> {{user.username}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="password">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Пароль</mat-header-cell>
+          <mat-cell *matCellDef="let user"> {{user.password}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="userRole">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Роль пользователя</mat-header-cell>
+          <mat-cell *matCellDef="let user"> {{user.userRole}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="personId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID персональных данных</mat-header-cell>
+          <mat-cell *matCellDef="let user"> {{user.personId}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let user; columns: displayedColumns;" (click)="updateUser(user)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+

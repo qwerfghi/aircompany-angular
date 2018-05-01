@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col"></div>
+    <div class="col-lg-9 table">
+
+      <mat-toolbar color="primary">
+        <button mat-button (click)="addPlane()">Добавить самолет</button>
+        <button mat-button>Удалить самолет</button>
+      </mat-toolbar>
+
+      <mat-table #table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="planeId">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID самолета</mat-header-cell>
+          <mat-cell *matCellDef="let plane"> {{plane.planeId}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="model">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Модель</mat-header-cell>
+          <mat-cell *matCellDef="let plane"> {{plane.model}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="businessClassCount">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Кол-во мест бизнесс-класса</mat-header-cell>
+          <mat-cell *matCellDef="let plane"> {{plane.businessClassCount}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="economyClassCount">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Кол-во мест эконом-класса</mat-header-cell>
+          <mat-cell *matCellDef="let plane"> {{plane.economyClassCount}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let plane; columns: displayedColumns;" (click)="updatePlane(plane)"></mat-row>
+
+      </mat-table>
+
+      <mat-paginator #paginator
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 20]"
+                     [showFirstLastButtons]="true">
+      </mat-paginator>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+

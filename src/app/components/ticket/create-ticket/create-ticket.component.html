@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Добавление билета</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="ticket.cost" placeholder="Цена">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="ticket.clazz" placeholder="Класс">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="ticket.placeNumber" placeholder="Номер места">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="ticket.passengerId" placeholder="ID пассажира">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отмена</button>
+  <button mat-button [mat-dialog-close]="ticket" cdkFocusInitial>Добавить</button>
+</div>
