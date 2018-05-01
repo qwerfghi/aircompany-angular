@@ -47,8 +47,8 @@ export class PersonComponent implements OnInit {
 
   addPerson(): void {
     let dialogRef = this.dialog.open(CreatePersonComponent, {
-      width: '250px',
-      height: '500px'
+      width: '350px',
+      height: '600px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -61,8 +61,8 @@ export class PersonComponent implements OnInit {
 
   updatePerson(person: Person) {
     let dialogRef = this.dialog.open(UpdatePersonComponent, {
-      width: '250px',
-      height: '500px',
+      width: '350px',
+      height: '600px',
       data: {
         person: person
       }

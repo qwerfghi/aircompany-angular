@@ -10,7 +10,9 @@
     <input matInput [(ngModel)]="passenger.sex" placeholder="Пол">
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="passenger.birthdate" placeholder="Дата рождения">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="passenger.birthdate" placeholder="Дата рождения">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <input matInput [(ngModel)]="passenger.passport" placeholder="Паспорт">

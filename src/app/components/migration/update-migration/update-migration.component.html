@@ -4,13 +4,17 @@
     <input matInput [(ngModel)]="data.migration.departureId" placeholder="ID места отправки">
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.migration.departureDate" placeholder="Дата отправления">
+    <input matInput [matDatepicker]="picker1" [(ngModel)]="data.migration.departureDate" placeholder="Дата отправления">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <input matInput [(ngModel)]="data.migration.arrivalId" placeholder="ID места прибытия">
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.migration.arrivalDate" placeholder="Дата прибытия">
+    <input matInput [matDatepicker]="picker2" [(ngModel)]="data.migration.arrivalDate" placeholder="Дата прибытия">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <input matInput [(ngModel)]="data.migration.planeId" placeholder="ID самолета">

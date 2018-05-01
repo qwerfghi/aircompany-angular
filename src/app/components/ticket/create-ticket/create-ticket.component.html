@@ -2,6 +2,7 @@
 <div mat-dialog-content>
   <mat-form-field>
     <input matInput [(ngModel)]="ticket.cost" placeholder="Цена">
+    <span matSuffix>$</span>
   </mat-form-field>
   <mat-form-field>
     <input matInput [(ngModel)]="ticket.clazz" placeholder="Класс">
