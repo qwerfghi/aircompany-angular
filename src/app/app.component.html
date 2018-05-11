@@ -1,104 +1,27 @@
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-  <a class="navbar-brand" routerLink="/pets">Admin Tool</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Employees">
-        <a class="nav-link" routerLink="employees">
-          <span class="nav-link-text">Employees</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Addresses">
-        <a class="nav-link" routerLink="addresses">
-          <span class="nav-link-text">Addresses</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cities">
-        <a class="nav-link" routerLink="cities">
-          <span class="nav-link-text">Cities</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Countries">
-        <a class="nav-link" routerLink="countries">
-          <span class="nav-link-text">Countries</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Migrations">
-        <a class="nav-link" routerLink="migrations">
-          <span class="nav-link-text">Migrations</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Passengers">
-        <a class="nav-link" routerLink="passengers">
-          <span class="nav-link-text">Passengers</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Persons">
-        <a class="nav-link" routerLink="persons">
-          <span class="nav-link-text">Persons</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planes">
-        <a class="nav-link" routerLink="planes">
-          <span class="nav-link-text">Planes</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tickets">
-        <a class="nav-link" routerLink="tickets">
-          <span class="nav-link-text">Tickets</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
-        <a class="nav-link" routerLink="users">
-          <span class="nav-link-text">Users</span>
-        </a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">
-          <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="content-wrapper">
-  <router-outlet></router-outlet>
-  <footer class="sticky-footer">
-    <div class="container">
-      <div class="text-center">
-        <small>Copyright © Your Website 2017</small>
-      </div>
-    </div>
-  </footer>
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
-  </a>
-  <!-- Logout Modal-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-       aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" routerLink="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<body>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <mat-nav-list>
+      <a mat-list-item routerLink="employees">Employees</a>
+      <a mat-list-item routerLink="addresses">Addresses</a>
+      <a mat-list-item routerLink="cities">Cities</a>
+      <a mat-list-item routerLink="countries">Countries</a>
+      <a mat-list-item routerLink="migrations">Migrations</a>
+      <a mat-list-item routerLink="passengers">Passengers</a>
+      <a mat-list-item routerLink="persons">Persons</a>
+      <a mat-list-item routerLink="planes">Planes</a>
+      <a mat-list-item routerLink="tickets">Tickets</a>
+      <a mat-list-item routerLink="users">Users</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span (click)="sidenav.toggle()">My Application</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 </body>
