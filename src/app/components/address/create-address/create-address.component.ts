@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatDialogRef} from "@angular/material";
-import {City} from "../../../model/City";
 import {Address} from "../../../model/Address";
 
 @Component({

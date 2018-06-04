@@ -47,7 +47,7 @@ export class PassengerComponent implements OnInit {
 
   addPassenger(): void {
     let dialogRef = this.dialog.open(CreatePassengerComponent, {
-      width: '250px',
+      width: '350px',
       height: '500px'
     });
 
@@ -61,7 +61,7 @@ export class PassengerComponent implements OnInit {
 
   updatePassenger(passenger: Passenger) {
     let dialogRef = this.dialog.open(UpdatePassengerComponent, {
-      width: '250px',
+      width: '350px',
       height: '500px',
       data: {
         passenger: passenger
