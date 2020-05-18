@@ -13,47 +13,44 @@ import {AddressService} from './service/address.service';
 import {UpdateEmployeeComponent} from './components/employees/update-employee/update-employee.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {UpdateAddressComponent} from './components/address/update-address/update-address.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CityComponent} from './components/city/city.component';
-import {CityService} from "./service/city.service";
+import {CityService} from './service/city.service';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSelectModule} from '@angular/material/select';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule
-} from '@angular/material';
 import {UpdateCityComponent} from './components/city/update-city/update-city.component';
 import {CreateCityComponent} from './components/city/create-city/create-city.component';
-import {CdkTableModule} from "@angular/cdk/table";
+import {CdkTableModule} from '@angular/cdk/table';
 import {CreateAddressComponent} from './components/address/create-address/create-address.component';
 import {CreateEmployeeComponent} from './components/employees/create-employee/create-employee.component';
 import {CountryComponent} from './components/country/country.component';
@@ -77,13 +74,13 @@ import {UpdateTicketComponent} from './components/ticket/update-ticket/update-ti
 import {UserComponent} from './components/user/user.component';
 import {CreateUserComponent} from './components/user/create-user/create-user.component';
 import {UpdateUserComponent} from './components/user/update-user/update-user.component';
-import {MigrationService} from "./service/migration.service";
-import {PersonService} from "./service/person.service";
-import {CountryService} from "./service/country.service";
-import {PassengerService} from "./service/passenger.service";
-import {PlaneService} from "./service/plane.service";
-import {UserService} from "./service/user.service";
-import {TicketService} from "./service/ticket.service";
+import {MigrationService} from './service/migration.service';
+import {PersonService} from './service/person.service';
+import {CountryService} from './service/country.service';
+import {PassengerService} from './service/passenger.service';
+import {PlaneService} from './service/plane.service';
+import {UserService} from './service/user.service';
+import {TicketService} from './service/ticket.service';
 
 
 @NgModule({
@@ -121,7 +118,7 @@ import {TicketService} from "./service/ticket.service";
     UpdateUserComponent
   ],
   imports: [
-    NgbModule.forRoot(),
+    NgbModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
