@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {City} from "../../model/City";
-import {CityService} from "../../service/city.service";
-import {UpdateCityComponent} from "./update-city/update-city.component";
-import {CreateCityComponent} from "./create-city/create-city.component";
+import {City} from '../../model/City';
+import {CityService} from '../../service/city.service';
+import {UpdateCityComponent} from './update-city/update-city.component';
+import {CreateCityComponent} from './create-city/create-city.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-city',

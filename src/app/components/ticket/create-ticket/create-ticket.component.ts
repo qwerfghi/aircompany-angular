@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
-import {Ticket} from "../../../model/Ticket";
+import {Ticket} from '../../../model/Ticket';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-ticket',

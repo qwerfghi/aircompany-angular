@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {PlaneService} from "../../service/plane.service";
-import {Plane} from "../../model/Plane";
-import {CreatePlaneComponent} from "./create-plane/create-plane.component";
-import {UpdatePlaneComponent} from "./update-plane/update-plane.component";
+import {PlaneService} from '../../service/plane.service';
+import {Plane} from '../../model/Plane';
+import {CreatePlaneComponent} from './create-plane/create-plane.component';
+import {UpdatePlaneComponent} from './update-plane/update-plane.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-plane',

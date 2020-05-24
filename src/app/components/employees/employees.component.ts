@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Employee} from '../../model/Employee';
 import {EmployeeService} from '../../service/employee.service';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {CreateEmployeeComponent} from "./create-employee/create-employee.component";
-import {UpdateEmployeeComponent} from "./update-employee/update-employee.component";
+import {CreateEmployeeComponent} from './create-employee/create-employee.component';
+import {UpdateEmployeeComponent} from './update-employee/update-employee.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-personal',

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
-import {Migration} from "../../../model/Migration";
+import {Migration} from '../../../model/Migration';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-migration',

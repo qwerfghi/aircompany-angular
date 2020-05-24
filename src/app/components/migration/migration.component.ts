@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {MigrationService} from "../../service/migration.service";
-import {CreateMigrationComponent} from "./create-migration/create-migration.component";
-import {Migration} from "../../model/Migration";
-import {UpdateMigrationComponent} from "./update-migration/update-migration.component";
+import {MigrationService} from '../../service/migration.service';
+import {CreateMigrationComponent} from './create-migration/create-migration.component';
+import {Migration} from '../../model/Migration';
+import {UpdateMigrationComponent} from './update-migration/update-migration.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-migration',

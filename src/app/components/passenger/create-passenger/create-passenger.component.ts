@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
-import {Passenger} from "../../../model/Passenger";
+import {Passenger} from '../../../model/Passenger';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-passenger',

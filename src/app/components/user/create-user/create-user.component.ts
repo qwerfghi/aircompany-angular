@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
-import {User} from "../../../model/User";
+import {User} from '../../../model/User';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-user',

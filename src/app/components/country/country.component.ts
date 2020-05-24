@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {CountryService} from "../../service/country.service";
-import {CreateCountryComponent} from "./create-country/create-country.component";
-import {UpdateCountryComponent} from "./update-country/update-country.component";
-import {Country} from "../../model/Country";
+import {CountryService} from '../../service/country.service';
+import {CreateCountryComponent} from './create-country/create-country.component';
+import {UpdateCountryComponent} from './update-country/update-country.component';
+import {Country} from '../../model/Country';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-country',

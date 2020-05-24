@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {TicketService} from "../../service/ticket.service";
-import {Ticket} from "../../model/Ticket";
-import {UpdateTicketComponent} from "./update-ticket/update-ticket.component";
-import {CreateTicketComponent} from "./create-ticket/create-ticket.component";
+import {TicketService} from '../../service/ticket.service';
+import {Ticket} from '../../model/Ticket';
+import {UpdateTicketComponent} from './update-ticket/update-ticket.component';
+import {CreateTicketComponent} from './create-ticket/create-ticket.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-ticket',

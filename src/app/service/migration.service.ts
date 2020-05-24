@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {of} from "rxjs/observable/of";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {catchError} from "rxjs/operators";
-import {Migration} from "../model/Migration";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {catchError} from 'rxjs/operators';
+import {Migration} from '../model/Migration';
+import {Observable, of} from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})

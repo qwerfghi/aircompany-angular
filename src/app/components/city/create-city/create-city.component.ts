@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {City} from "../../../model/City";
-import {MatDialogRef} from "@angular/material";
+import {City} from '../../../model/City';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-city',

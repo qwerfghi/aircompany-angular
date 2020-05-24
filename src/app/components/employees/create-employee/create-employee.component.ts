@@ -1,6 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';;
-import {MatDialogRef} from "@angular/material";
-import {Employee} from "../../../model/Employee";
+import {Component, Input, OnInit} from '@angular/core';
+import {Employee} from '../../../model/Employee';
+import {MatDialogRef} from '@angular/material/dialog';
+
+;
 
 @Component({
   selector: 'app-create-employee',

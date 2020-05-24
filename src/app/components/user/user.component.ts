@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {UserService} from "../../service/user.service";
-import {User} from "../../model/User";
-import {UpdateUserComponent} from "./update-user/update-user.component";
-import {CreateUserComponent} from "./create-user/create-user.component";
+import {UserService} from '../../service/user.service';
+import {User} from '../../model/User';
+import {UpdateUserComponent} from './update-user/update-user.component';
+import {CreateUserComponent} from './create-user/create-user.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user',

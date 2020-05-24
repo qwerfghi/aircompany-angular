@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {PassengerService} from "../../service/passenger.service";
-import {CreatePassengerComponent} from "./create-passenger/create-passenger.component";
-import {Passenger} from "../../model/Passenger";
-import {UpdatePassengerComponent} from "./update-passenger/update-passenger.component";
+import {PassengerService} from '../../service/passenger.service';
+import {CreatePassengerComponent} from './create-passenger/create-passenger.component';
+import {Passenger} from '../../model/Passenger';
+import {UpdatePassengerComponent} from './update-passenger/update-passenger.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-passenger',

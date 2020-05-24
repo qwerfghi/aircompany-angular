@@ -1,9 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Address} from '../../model/Address';
 import {AddressService} from '../../service/address.service';
-import {UpdateAddressComponent} from "./update-address/update-address.component";
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
-import {CreateAddressComponent} from "./create-address/create-address.component";
+import {UpdateAddressComponent} from './update-address/update-address.component';
+import {CreateAddressComponent} from './create-address/create-address.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-address',

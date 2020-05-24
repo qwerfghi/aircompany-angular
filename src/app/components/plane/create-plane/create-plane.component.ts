@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
-import {Plane} from "../../../model/Plane";
+import {Plane} from '../../../model/Plane';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-plane',
